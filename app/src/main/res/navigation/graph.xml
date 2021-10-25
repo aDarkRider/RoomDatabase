@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.roomdatabase.ui.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_usersDetailFragment"
+            app:destination="@id/usersDetailFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_adminDetailFragment"
+            app:destination="@id/adminDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminDetailFragment"
+        android:name="com.example.roomdatabase.ui.fragment.AdminDetailFragment"
+        android:label="fragment_admin_detail"
+        tools:layout="@layout/fragment_admin_detail" >
+        <action
+            android:id="@+id/action_adminDetailFragment_to_addAdminFragment"
+            app:destination="@id/addAdminFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/usersDetailFragment"
+        android:name="com.example.roomdatabase.ui.fragment.UsersDetailFragment"
+        android:label="fragment_users_detail"
+        tools:layout="@layout/fragment_users_detail" >
+        <action
+            android:id="@+id/action_usersDetailFragment_to_addUserFragment"
+            app:destination="@id/addUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAdminFragment"
+        android:name="com.example.roomdatabase.ui.fragment.AddAdminFragment"
+        android:label="fragment_add_admin"
+        tools:layout="@layout/fragment_add_admin" />
+    <fragment
+        android:id="@+id/addUserFragment"
+        android:name="com.example.roomdatabase.ui.fragment.AddUserFragment"
+        android:label="fragment_add_user"
+        tools:layout="@layout/fragment_add_user" />
+</navigation>
